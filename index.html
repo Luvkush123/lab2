@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvkush (24BTRSN022) — Horizon ANC Headphones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #161920;
+            --border-color: #2b313b;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --success: #10b981;
+            --success-bg: rgba(16, 185, 129, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .product-wrapper {
+            width: 100%;
+            max-width: 680px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header-section {
+            padding: 32px 32px 24px 32px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .brand-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+
+        .price-badge {
+            text-align: right;
+        }
+
+        .price-amount {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.03em;
+        }
+
+        .price-subtext {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Clean Table Styles */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+
+        .specs-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .specs-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.015);
+        }
+
+        .specs-table th, 
+        .specs-table td {
+            padding: 16px 32px;
+            font-size: 0.925rem;
+        }
+
+        .specs-table th {
+            width: 32%;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .specs-table td {
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        /* Utilities inside table */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--success-bg);
+            color: var(--success);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--success);
+            border-radius: 50%;
+        }
+
+        .action-footer {
+            padding: 24px 32px;
+            background: rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 16px;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.925rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 540px) {
+            .header-section {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .price-badge {
+                text-align: left;
+            }
+            .specs-table th, .specs-table td {
+                padding: 14px 20px;
+            }
+            .header-section, .action-footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-wrapper">
+        <!-- Top Product Header -->
+        <div class="header-section">
+            <div>
+                <div class="brand-tag">Luvkush &bull; 24BTRSN022</div>
+                <h1 class="product-title">Horizon Pro Wireless</h1>
+            </div>
+            <div class="price-badge">
+                <div class="price-amount">$299.00</div>
+                <div class="price-subtext">Free Global Shipping</div>
+            </div>
+        </div>
+
+        <!-- Semantic Information Table -->
+        <table class="specs-table">
+            <tr>
+                <th>Category</th>
+                <td>High-Fidelity Audio</td>
+            </tr>
+            <tr>
+                <th>Active Noise Cancellation</th>
+                <td>Hybrid ANC up to -45dB</td>
+            </tr>
+            <tr>
+                <th>Battery Life</th>
+                <td>Up to 40 Hours (ANC On)</td>
+            </tr>
+            <tr>
+                <th>Connectivity</th>
+                <td>Bluetooth 5.3</td>
+            </tr>
+            <tr>
+                <th>Availability</th>
+                <td>
+                    <span class="status-pill">
+                        <span class="status-dot"></span> In Stock
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th>Warranty</th>
+                <td>5-Year International Replacement</td>
+            </tr>
+        </table>
+
+        <!-- Action Footer -->
+        <div class="action-footer">
+            <button class="btn" onclick="alert('Added to bag!')">Add to cart</button>
+        </div>
+    </div>
+
+</body>
+</html>
